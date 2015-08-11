@@ -39,4 +39,7 @@ public extension Bool {
         self = (string as NSString).boolValue
     }
     
+    public var m3u8Description: String {
+        return self == true ? "YES" : "NO"
+    }
 }

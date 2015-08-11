@@ -31,6 +31,13 @@ class String_M3U8AttributesSpec: QuickSpec {
                 expect(Bool(string: "TRUE")) == true
                 expect(Bool(string: "NO")) == false
                 expect(Bool(string: "FALSE")) == false
+                expect(Bool(string: nil)).to(beNil())
+            }
+         
+            it("should format bool to string correctly") {
+                // This crashes Xcode (7.0B5)
+                expect(Bool(string: "YES")!.m3u8Description) == "YES"
+                expect(Bool(string: "NO")!.m3u8Description) == "NO"
             }
             
         }
