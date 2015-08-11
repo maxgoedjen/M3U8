@@ -48,6 +48,40 @@ class ByteRangeSpec: QuickSpec {
                 expect(item).to(beNil())
             }
 
+            context("equality") {
+                
+                it("should consider ranges equal regardless of initalizers") {
+                    let left = ByteRange(range: 1..<3)
+                    let right = ByteRange(start: 1, length: 2)
+                    expect(left) == right
+                }
+                
+                it("should not consider different ranges equal") {
+                    let left = ByteRange(range: 1..<3)
+                    let right = ByteRange(range: 1...3)
+                    expect(left) != right
+                }
+                
+                it("should consider equal lengths equal") {
+                    let left = ByteRange(length: 1)
+                    let right = ByteRange(length: 1)
+                    expect(left) == right
+                }
+                
+                it("should not consider different lengths equal") {
+                    let left = ByteRange(length: 1)
+                    let right = ByteRange(length: 2)
+                    expect(left) != right
+                }
+
+                it("should not consider ranges and lengths equal") {
+                    let left = ByteRange(range: 1..<3)
+                    let right = ByteRange(length: 2)
+                    expect(left) != right
+                }
+
+                
+            }
 
         }
         

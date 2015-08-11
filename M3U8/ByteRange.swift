@@ -53,3 +53,17 @@ extension ByteRange: CustomStringConvertible {
     }
     
 }
+
+extension ByteRange: Equatable {
+}
+
+public func ==(lhs: ByteRange, rhs: ByteRange) -> Bool {
+    switch (lhs.value, rhs.value) {
+    case (.FullRange(let lRange), .FullRange(let rRange)):
+        return lRange == rRange
+    case (.LengthOnly(let lLength), .LengthOnly(let rLength)):
+        return lLength == rLength
+    default:
+        return false
+    }
+}
