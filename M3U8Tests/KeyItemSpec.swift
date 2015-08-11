@@ -23,7 +23,7 @@ class KeyItemSpec: QuickSpec {
                 expect(item.iv) == "D512BBF"
                 expect(item.keyFormat) == "identity"
                 expect(item.keyFormatVersions) == "1/3"
-                expect(item.description) == "#EXT-X-KEY:METHOD=AES-128,URI=\"http://test.key\",IV=D512BBF,KEYFORMAT=\"identity\",KEYFORMATVERSIONS=\"1/3\")"
+                expect(item.description) == "#EXT-X-KEY:METHOD=AES-128,URI=\"http://test.key\",IV=D512BBF,KEYFORMAT=\"identity\",KEYFORMATVERSIONS=\"1/3\""
             }
             
             it("should initialize with only partial parameters") {
@@ -40,11 +40,11 @@ class KeyItemSpec: QuickSpec {
                 let string = "#EXT-X-KEY:METHOD=AES-128,URI=\"http://test.key\",IV=D512BBF,KEYFORMAT=\"identity\",KEYFORMATVERSIONS=\"1/3\""
                 let item = KeyItem(string: string)
                 expect(item).toNot(beNil())
-                expect(item.method) == "AES=128"
-                expect(item.uri) == "http://test.key"
-                expect(item.iv) == "D512BBF"
-                expect(item.keyFormat) == "identity"
-                expect(item.keyFormatVersions) == "1/3"
+                expect(item?.method) == "AES-128"
+                expect(item?.uri) == "http://test.key"
+                expect(item?.iv) == "D512BBF"
+                expect(item?.keyFormat) == "identity"
+                expect(item?.keyFormatVersions) == "1/3"
             }
             
         }

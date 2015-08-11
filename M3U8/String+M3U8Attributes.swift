@@ -19,8 +19,8 @@ extension String {
             let matches = regex.matchesInString(firstLine, options: [], range: NSMakeRange(0, (firstLine as NSString).length))
             return matches.reduce([:] as [String: String]) { acc, next in
                 let nsStrung = firstLine as NSString
-                let key = nsStrung.substringWithRange(next.rangeAtIndex(0))
-                let value = nsStrung.substringWithRange(next.rangeAtIndex(1))
+                let key = nsStrung.substringWithRange(next.rangeAtIndex(1))
+                let value = nsStrung.substringWithRange(next.rangeAtIndex(2)).stringByReplacingOccurrencesOfString("\"", withString: "")
                 var modifiedAccum = acc
                 modifiedAccum[key] = value
                 return modifiedAccum

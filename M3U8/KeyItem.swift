@@ -10,13 +10,13 @@ import Foundation
 
 public struct KeyItem {
     
-    public let method: String?
+    public let method: String
     public let uri: String?
     public let iv: String?
     public let keyFormat: String?
     public let keyFormatVersions: String?
     
-    public init(method: String? = nil, uri: String? = nil, iv: String? = nil, keyFormat: String? = nil, keyFormatVersions: String? = nil) {
+    public init(method: String, uri: String? = nil, iv: String? = nil, keyFormat: String? = nil, keyFormatVersions: String? = nil) {
         self.method = method
         self.uri = uri
         self.iv = iv
@@ -24,9 +24,12 @@ public struct KeyItem {
         self.keyFormatVersions = keyFormatVersions
     }
     
-    public init(string: String) {
+    public init?(string: String) {
         let attributes = string.attributes
-        method = attributes["METHOD"]
+        guard let method = attributes["METHOD"] else {
+            return nil
+        }
+        self.method = method
         uri = attributes["URI"]
         iv = attributes["IV"]
         keyFormat = attributes["KEYFORMAT"]
@@ -38,7 +41,20 @@ public struct KeyItem {
 extension KeyItem {
     
     public var description: String {
-        return ""
+        var components = ["#EXT-X-KEY:METHOD=\(method)"]
+        if let uri = uri {
+            components.append("URI=\"\(uri)\"")
+        }
+        if let iv = iv {
+            components.append("IV=\(iv)")
+        }
+        if let keyFormat = keyFormat {
+            components.append("KEYFORMAT=\"\(keyFormat)\"")
+        }
+        if let keyFormatVersions = keyFormatVersions {
+            components.append("KEYFORMATVERSIONS=\"\(keyFormatVersions)\"")
+        }
+        return ",".join(components)
     }
     
 }
