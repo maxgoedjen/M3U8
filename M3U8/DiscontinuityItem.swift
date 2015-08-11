@@ -8,8 +8,11 @@
 
 import Foundation
 
-struct DiscontinuityItem: Item {
+public struct DiscontinuityItem: Item {
     
-    let description = "#EXT-X-DISCONTINUITY\n"
+    public let description = "#EXT-X-DISCONTINUITY\n"
+    
+    public init() {
+    }
     
 }

@@ -24,6 +24,7 @@
 		502584371B79CE17003D2AD5 /* variant_angles.m3u8 in Resources */ = {isa = PBXBuildFile; fileRef = 5025842D1B79CE17003D2AD5 /* variant_angles.m3u8 */; };
 		502584381B79CE17003D2AD5 /* variant_audio.m3u8 in Resources */ = {isa = PBXBuildFile; fileRef = 5025842E1B79CE17003D2AD5 /* variant_audio.m3u8 */; };
 		5025843B1B79CE2F003D2AD5 /* ByteRangeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5025843A1B79CE2F003D2AD5 /* ByteRangeSpec.swift */; };
+		5025843D1B79D352003D2AD5 /* DiscontinuityItemSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5025843C1B79D352003D2AD5 /* DiscontinuityItemSpec.swift */; };
 		BBA0694D58141057DDC1E03D /* Pods_M3U8Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 365ADF74051B799C427817F4 /* Pods_M3U8Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		5025842E1B79CE17003D2AD5 /* variant_audio.m3u8 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = variant_audio.m3u8; sourceTree = "<group>"; };
 		502584391B79CE2E003D2AD5 /* M3U8Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "M3U8Tests-Bridging-Header.h"; sourceTree = "<group>"; };
 		5025843A1B79CE2F003D2AD5 /* ByteRangeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ByteRangeSpec.swift; sourceTree = "<group>"; };
+		5025843C1B79D352003D2AD5 /* DiscontinuityItemSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscontinuityItemSpec.swift; sourceTree = "<group>"; };
 		726C9D47025C31E5C5C3859A /* Pods-M3U8Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-M3U8Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-M3U8Tests/Pods-M3U8Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				5025843A1B79CE2F003D2AD5 /* ByteRangeSpec.swift */,
+				5025843C1B79D352003D2AD5 /* DiscontinuityItemSpec.swift */,
 				502584241B79CE17003D2AD5 /* Test Files */,
 				502584131B79C87D003D2AD5 /* Info.plist */,
 				502584391B79CE2E003D2AD5 /* M3U8Tests-Bridging-Header.h */,
@@ -342,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5025843D1B79D352003D2AD5 /* DiscontinuityItemSpec.swift in Sources */,
 				5025843B1B79CE2F003D2AD5 /* ByteRangeSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
