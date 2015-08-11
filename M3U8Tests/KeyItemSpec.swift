@@ -31,7 +31,7 @@ class KeyItemSpec: QuickSpec {
                 expect(item.description) == "#EXT-X-KEY:METHOD=AES-128,URI=\"http://test.key\""
             }
             
-            it("should initialize with only no method") {
+            it("should initialize with only method") {
                 let item = KeyItem(method: "NONE")
                 expect(item.description) == "#EXT-X-KEY:METHOD=NONE"
             }
@@ -47,7 +47,7 @@ class KeyItemSpec: QuickSpec {
                 expect(item?.keyFormatVersions) == "1/3"
             }
 
-            it("initialization without method should fail") {
+            it("shoudl fail to initialize from string without method") {
                 let string = "#EXT-X-KEY:URI=\"http://test.key\",IV=D512BBF,KEYFORMAT=\"identity\",KEYFORMATVERSIONS=\"1/3\""
                 let item = KeyItem(string: string)
                 expect(item).to(beNil())

@@ -43,7 +43,7 @@ class ByteRangeSpec: QuickSpec {
                 expect(item?.description) == "4000"
             }
             
-            it("should fail for non-int-based data") {
+            it("should fail to initialize from string with gibberish") {
                 let item = ByteRange(string: "asdf")
                 expect(item).to(beNil())
             }

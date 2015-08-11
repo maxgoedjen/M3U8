@@ -32,7 +32,12 @@ class MapItemSpec: QuickSpec {
                 expect(item?.uri) == "frelo/prog_index.m3u8"
                 expect(item?.byteRange) == ByteRange(range: 300..<3800)
             }
-            
+
+            it("should fail to initialize from string without uri") {
+                let item = MapItem(string: "#EXT-X-MAP:BYTERANGE=\"3500@300\"")
+                expect(item).to(beNil())
+            }
+
         }
         
     }
