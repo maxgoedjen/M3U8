@@ -8,19 +8,48 @@
 
 import Foundation
 
-struct ByteRange {
+public struct ByteRange {
+
+    private enum Mode {
+        case FullRange(Range<Int>)
+        case LengthOnly(Int)
+    }
     
-//    let range: Range<Int>
-//    
-//    init(range: Range<Int>) {
-//        self.range = range
-//    }
-//    
-//    init?(string: String) {
-//        let values = string.componentsSeparatedByString("@")
-//        guard let lengthString = values.first else { return nil }
-//        let length = Int(lengthString)
-//        range = Range(
-//    }
+    private let value: Mode
+
+    public init(range: Range<Int>) {
+        value = .FullRange(range)
+    }
+    
+    public init(start: Int, length: Int) {
+        value = .FullRange(start..<(start+length))
+    }
+    
+    public init(length: Int) {
+        value = .LengthOnly(length)
+    }
+    
+    public init?(string: String) {
+        let values = string.componentsSeparatedByString("@")
+        guard let lengthString = values.first, let length = Int(lengthString) else { return nil }
+        if values.count == 2,  let start = Int(values[1]) {
+            value = .LengthOnly(start)
+        } else {
+            value = .LengthOnly(length)
+        }
+    }
+    
+}
+
+extension ByteRange: CustomStringConvertible {
+    
+    public var description: String {
+        switch value {
+        case .FullRange(let range):
+            return "\(range.endIndex-range.startIndex)@\(range.startIndex)"
+        case .LengthOnly(let length):
+            return "\(length)"
+        }
+    }
     
 }

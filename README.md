@@ -1,0 +1,1 @@
+This is a Swift port of https://github.com/globocom/m3u8
