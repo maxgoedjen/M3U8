@@ -31,3 +31,11 @@ public extension String {
     }
     
 }
+
+public extension Bool {
+    
+    public init(string: String) {
+        self = (string as NSString).boolValue
+    }
+    
+}

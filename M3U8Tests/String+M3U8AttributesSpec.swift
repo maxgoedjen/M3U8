@@ -26,6 +26,13 @@ class String_M3U8AttributesSpec: QuickSpec {
                 expect(parsed["ID"]) == "33"
             }
             
+            it("should allow boolean initialization with strings") {
+                expect(Bool(string: "YES")) == true
+                expect(Bool(string: "TRUE")) == true
+                expect(Bool(string: "NO")) == false
+                expect(Bool(string: "FALSE")) == false
+            }
+            
         }
         
     }
