@@ -34,7 +34,8 @@ public extension String {
 
 public extension Bool {
     
-    public init(string: String) {
+    public init?(string: String?) {
+        guard let string = string else { return nil }
         self = (string as NSString).boolValue
     }
     
