@@ -33,7 +33,7 @@ public struct ByteRange {
         let values = string.componentsSeparatedByString("@")
         guard let lengthString = values.first, let length = Int(lengthString) else { return nil }
         if values.count == 2,  let start = Int(values[1]) {
-            value = .LengthOnly(start)
+            value = .FullRange(start..<(start+length))
         } else {
             value = .LengthOnly(length)
         }
