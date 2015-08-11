@@ -16,9 +16,21 @@ class MapItemSpec: QuickSpec {
         
         describe("MapItem") {
             
-            it("should provide m3u8 format representation") {
-                let item = DiscontinuityItem()
-                expect(item.description) == "#EXT-X-DISCONTINUITY\n"
+            it("should initialize from uri and byterange") {
+                let item = MapItem(uri: "frelo/prog_index.m3u8", byteRange: ByteRange(range: 600..<5100))
+                expect(item.description) == "#EXT-X-MAP:URI=\"frelo/prog_index.m3u8\",BYTERANGE=\"4500@600\""
+            }
+            
+            it("should initialize with uri only") {
+                let item = MapItem(uri: "frelo/prog_index.m3u8")
+                expect(item.description) == "#EXT-X-MAP:URI=\"frehi/prog_index.m3u8\""
+            }
+            
+            it("should initialize from string") {
+                let item = MapItem(string: "#EXT-X-MAP:URI=\"frelo/prog_index.m3u8\",BYTERANGE=\"3500@300\"")
+                expect(item).toNot(beNil())
+                expect(item?.uri) == "frelo/prog_index.m3u8"
+                expect(item?.byteRange) == ByteRange(range: 300..<3800)
             }
             
         }
