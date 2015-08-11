@@ -25,7 +25,7 @@ public struct KeyItem {
     }
     
     public init?(string: String) {
-        let attributes = string.attributes
+        let attributes = string.m3u8Attributes
         guard let method = attributes["METHOD"] else {
             return nil
         }

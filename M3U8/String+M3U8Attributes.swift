@@ -8,9 +8,9 @@
 
 import Foundation
 
-extension String {
+public extension String {
     
-    public var attributes: [String: String] {
+    public var m3u8Attributes: [String: String] {
         guard let firstLine = componentsSeparatedByString("\n").first else { return [:] }
         // Wooooooo string escapes
         // Reference Ruby-style regex: /([A-z-]+)\s*=\s*("[^"]*"|[^,]*)/
