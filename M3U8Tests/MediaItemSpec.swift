@@ -33,9 +33,9 @@ class MediaItemSpec: QuickSpec {
                 expect(item?.groupID) == "audio-lo"
                 expect(item?.language) == "fre"
                 expect(item?.associatedLanguage) == "spoken"
-                expect(item?.name) == "French"
+                expect(item?.name) == "Francais"
                 expect(item?.autoSelect) == true
-                expect(item?.isDefault) == true
+                expect(item?.isDefault) == false
                 expect(item?.forced) == true
                 expect(item?.uri) == "frelo/prog_index.m3u8"
             }
