@@ -1,1 +1,1 @@
-This is a Swift port of https://github.com/globocom/m3u8
+This is a _*VERY WORK-IN-PROGRESS*_ Swift port of https://github.com/globocom/m3u8
