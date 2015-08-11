@@ -55,7 +55,27 @@ public struct MediaItem: Item {
 extension MediaItem {
     
     public var description: String {
-        return ""
+        var components = ["#EXT-X-MEDIA:TYPE=\(type),GROUP-ID=\"\(groupID)\""]
+        if let language = language {
+            components.append("LANGUAGE=\"\(language)\"")
+        }
+        if let associatedLanguage = associatedLanguage {
+            components.append("ASSOC-LANGUAGE=\"\(associatedLanguage)\"")
+        }
+        components.append("NAME=\"\(name)\"")
+        if let autoSelect = autoSelect {
+            components.append("AUTOSELECT=\(autoSelect.m3u8Description)")
+        }
+        if let isDefault = isDefault {
+            components.append("DEFAULT=\(isDefault.m3u8Description)")
+        }
+        if let uri = uri {
+            components.append("URI=\"\(uri)\"")
+        }
+        if let forced = forced {
+            components.append("FORCED=\(forced.m3u8Description)")
+        }
+        return ",".join(components)
     }
     
 }
