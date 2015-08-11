@@ -46,7 +46,13 @@ class KeyItemSpec: QuickSpec {
                 expect(item?.keyFormat) == "identity"
                 expect(item?.keyFormatVersions) == "1/3"
             }
-            
+
+            it("initialization without method should fail") {
+                let string = "#EXT-X-KEY:URI=\"http://test.key\",IV=D512BBF,KEYFORMAT=\"identity\",KEYFORMATVERSIONS=\"1/3\""
+                let item = KeyItem(string: string)
+                expect(item).to(beNil())
+            }
+
         }
         
     }
