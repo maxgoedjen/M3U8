@@ -31,6 +31,8 @@
 		502584451B79E2F1003D2AD5 /* MapItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502584441B79E2F1003D2AD5 /* MapItem.swift */; };
 		502584471B79E315003D2AD5 /* MapItemSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502584461B79E315003D2AD5 /* MapItemSpec.swift */; };
 		502584491B79E363003D2AD5 /* String+M3U8AttributesSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502584481B79E363003D2AD5 /* String+M3U8AttributesSpec.swift */; };
+		5025844B1B79E97D003D2AD5 /* MediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5025844A1B79E97D003D2AD5 /* MediaItem.swift */; };
+		5025844D1B79E99F003D2AD5 /* MediaItemSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5025844C1B79E99F003D2AD5 /* MediaItemSpec.swift */; };
 		BBA0694D58141057DDC1E03D /* Pods_M3U8Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 365ADF74051B799C427817F4 /* Pods_M3U8Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -75,6 +77,8 @@
 		502584441B79E2F1003D2AD5 /* MapItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapItem.swift; sourceTree = "<group>"; };
 		502584461B79E315003D2AD5 /* MapItemSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapItemSpec.swift; sourceTree = "<group>"; };
 		502584481B79E363003D2AD5 /* String+M3U8AttributesSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+M3U8AttributesSpec.swift"; sourceTree = "<group>"; };
+		5025844A1B79E97D003D2AD5 /* MediaItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaItem.swift; sourceTree = "<group>"; };
+		5025844C1B79E99F003D2AD5 /* MediaItemSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaItemSpec.swift; sourceTree = "<group>"; };
 		726C9D47025C31E5C5C3859A /* Pods-M3U8Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-M3U8Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-M3U8Tests/Pods-M3U8Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +139,7 @@
 				5025841E1B79CBD8003D2AD5 /* Item.swift */,
 				502584401B79D407003D2AD5 /* KeyItem.swift */,
 				502584441B79E2F1003D2AD5 /* MapItem.swift */,
+				5025844A1B79E97D003D2AD5 /* MediaItem.swift */,
 				502584421B79D4D2003D2AD5 /* String+M3U8Attributes.swift */,
 				502584051B79C87D003D2AD5 /* M3U8.h */,
 				502584071B79C87D003D2AD5 /* Info.plist */,
@@ -149,6 +154,7 @@
 				5025843C1B79D352003D2AD5 /* DiscontinuityItemSpec.swift */,
 				5025843E1B79D3E4003D2AD5 /* KeyItemSpec.swift */,
 				502584461B79E315003D2AD5 /* MapItemSpec.swift */,
+				5025844C1B79E99F003D2AD5 /* MediaItemSpec.swift */,
 				502584481B79E363003D2AD5 /* String+M3U8AttributesSpec.swift */,
 				502584241B79CE17003D2AD5 /* Test Files */,
 				502584131B79C87D003D2AD5 /* Info.plist */,
@@ -353,6 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				502584431B79D4D2003D2AD5 /* String+M3U8Attributes.swift in Sources */,
+				5025844B1B79E97D003D2AD5 /* MediaItem.swift in Sources */,
 				502584411B79D407003D2AD5 /* KeyItem.swift in Sources */,
 				502584231B79CC53003D2AD5 /* Errors.swift in Sources */,
 				5025841F1B79CBD8003D2AD5 /* Item.swift in Sources */,
@@ -366,6 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5025844D1B79E99F003D2AD5 /* MediaItemSpec.swift in Sources */,
 				502584471B79E315003D2AD5 /* MapItemSpec.swift in Sources */,
 				502584491B79E363003D2AD5 /* String+M3U8AttributesSpec.swift in Sources */,
 				5025843D1B79D352003D2AD5 /* DiscontinuityItemSpec.swift in Sources */,
