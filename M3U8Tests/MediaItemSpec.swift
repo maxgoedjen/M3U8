@@ -17,7 +17,7 @@ class MediaItemSpec: QuickSpec {
         describe("MediaItem") {
             
             it("should initialize from partial parameters") {
-                let item = MediaItem(type: "AUDIO", groupID: "audio-lo", name: "Francais", language: "fre", autoSelect: true, isDefault: true, uri: "frelo/prog_index.m3u8")
+                let item = MediaItem(type: "AUDIO", groupID: "audio-lo", name: "Francais", language: "fre", autoSelect: true, isDefault: false, uri: "frelo/prog_index.m3u8")
                 expect(item.description) == "#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID=\"audio-lo\",LANGUAGE=\"fre\",NAME=\"Francais\",AUTOSELECT=YES,DEFAULT=NO,URI=\"frelo/prog_index.m3u8\""
             }
 
