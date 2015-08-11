@@ -23,7 +23,7 @@ class MapItemSpec: QuickSpec {
             
             it("should initialize with uri only") {
                 let item = MapItem(uri: "frelo/prog_index.m3u8")
-                expect(item.description) == "#EXT-X-MAP:URI=\"frehi/prog_index.m3u8\""
+                expect(item.description) == "#EXT-X-MAP:URI=\"frelo/prog_index.m3u8\""
             }
             
             it("should initialize from string") {
