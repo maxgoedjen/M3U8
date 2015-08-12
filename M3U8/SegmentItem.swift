@@ -10,6 +10,18 @@ import Foundation
 
 public struct SegmentItem: Item {
     
+    public let duration: Double
+    public let segment: String
+    public let comment: String?
+    public let byteRange: ByteRange?
+    
+    public init(duration: Double, segment: String, comment: String? = nil, byteRange: ByteRange? = nil) {
+        self.duration = duration
+        self.segment = segment
+        self.comment = comment
+        self.byteRange = byteRange
+    }
+    
     public init?(string: String) {
         return nil
     }
@@ -19,7 +31,14 @@ public struct SegmentItem: Item {
 extension SegmentItem {
     
     public var description: String {
-        return ""
+        let byteRangeFormat: String
+        if let range = byteRange {
+            byteRangeFormat = "\n#EXT-X-BYTERANGE:\(range)"
+        } else {
+            byteRangeFormat = ""
+        }
+        let commentFormat = comment ?? ""
+        return "#EXTINF:\(duration),\(commentFormat)\(byteRangeFormat)\n\(segment)"
     }
     
 }
