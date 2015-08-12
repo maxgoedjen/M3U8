@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct KeyItem {
+public struct KeyItem: Item {
     
     public let method: String
     public let uri: String?

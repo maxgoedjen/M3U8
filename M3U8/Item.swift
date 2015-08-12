@@ -9,4 +9,5 @@
 import Foundation
 
 public protocol Item: CustomStringConvertible {
+    init?(string: String)
 }

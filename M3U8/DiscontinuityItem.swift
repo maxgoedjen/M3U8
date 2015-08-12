@@ -15,4 +15,7 @@ public struct DiscontinuityItem: Item {
     public init() {
     }
     
+    public init?(string: String) {
+    }
+    
 }

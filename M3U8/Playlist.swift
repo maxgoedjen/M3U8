@@ -27,13 +27,8 @@ public struct Playlist {
         self.iframesOnly = iframesOnly
     }
     
-    public init(string: String) {
-        self.version = -1
-        self.cache = false
-        self.target = 0
-        self.sequence = -1
-        self.type = "OK"
-        self.iframesOnly = false
+    public init?(string: String) {
+        return nil
     }
     
     public var playlistSize: Int {

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct PlaylistItem {
+public struct PlaylistItem: Item {
     
     public let uri: String
     public let iframe: Bool
@@ -42,6 +42,18 @@ public struct PlaylistItem {
         self.audio = audio
         self.subtitles = subtitles
         self.closedCaptions = closedCaptions
+    }
+    
+    public init?(string: String) {
+        return nil
+    }
+    
+}
+
+extension PlaylistItem {
+    
+    public var description: String {
+        return ""
     }
     
 }
