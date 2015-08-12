@@ -16,7 +16,7 @@ class PlaylistSpec: QuickSpec {
         
         describe("Playlist") {
             
-            it("should fail") {
+            it("is untested") {
                 fail()
             }
             

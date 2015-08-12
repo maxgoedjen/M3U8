@@ -1,5 +1,5 @@
 //
-//  PlaylistItemSpec.swift
+//  TimeItemSpec.swift
 //  M3U8
 //
 //  Created by Max Goedjen on 8/12/15.
@@ -10,11 +10,11 @@ import M3U8
 import Nimble
 import Quick
 
-class PlaylistItemSpec: QuickSpec {
+class TimeItemSpec: QuickSpec {
     
     override func spec() {
         
-        describe("PlaylistItem") {
+        describe("Time Item") {
             
             it("is untested") {
                 fail()
