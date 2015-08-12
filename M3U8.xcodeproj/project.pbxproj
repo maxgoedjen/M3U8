@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5020802B1B7B339400E84485 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5020802A1B7B339400E84485 /* Playlist.swift */; };
 		5020802D1B7B339A00E84485 /* PlaylistSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5020802C1B7B339A00E84485 /* PlaylistSpec.swift */; };
+		5020802F1B7B37C000E84485 /* PlaylistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5020802E1B7B37C000E84485 /* PlaylistItem.swift */; };
+		502080311B7B37C900E84485 /* PlaylistItemSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502080301B7B37C900E84485 /* PlaylistItemSpec.swift */; };
 		502584061B79C87D003D2AD5 /* M3U8.h in Headers */ = {isa = PBXBuildFile; fileRef = 502584051B79C87D003D2AD5 /* M3U8.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5025840D1B79C87D003D2AD5 /* M3U8.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502584021B79C87D003D2AD5 /* M3U8.framework */; };
 		5025841D1B79C89F003D2AD5 /* ByteRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5025841C1B79C89F003D2AD5 /* ByteRange.swift */; };
@@ -53,6 +55,8 @@
 		365ADF74051B799C427817F4 /* Pods_M3U8Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_M3U8Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5020802A1B7B339400E84485 /* Playlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
 		5020802C1B7B339A00E84485 /* PlaylistSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistSpec.swift; sourceTree = "<group>"; };
+		5020802E1B7B37C000E84485 /* PlaylistItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistItem.swift; sourceTree = "<group>"; };
+		502080301B7B37C900E84485 /* PlaylistItemSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistItemSpec.swift; sourceTree = "<group>"; };
 		502584021B79C87D003D2AD5 /* M3U8.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = M3U8.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		502584051B79C87D003D2AD5 /* M3U8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = M3U8.h; sourceTree = "<group>"; };
 		502584071B79C87D003D2AD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 				502584441B79E2F1003D2AD5 /* MapItem.swift */,
 				5025844A1B79E97D003D2AD5 /* MediaItem.swift */,
 				5020802A1B7B339400E84485 /* Playlist.swift */,
+				5020802E1B7B37C000E84485 /* PlaylistItem.swift */,
 				502584421B79D4D2003D2AD5 /* String+M3U8Attributes.swift */,
 				502584051B79C87D003D2AD5 /* M3U8.h */,
 				502584071B79C87D003D2AD5 /* Info.plist */,
@@ -161,6 +166,7 @@
 				502584461B79E315003D2AD5 /* MapItemSpec.swift */,
 				5025844C1B79E99F003D2AD5 /* MediaItemSpec.swift */,
 				5020802C1B7B339A00E84485 /* PlaylistSpec.swift */,
+				502080301B7B37C900E84485 /* PlaylistItemSpec.swift */,
 				502584481B79E363003D2AD5 /* String+M3U8AttributesSpec.swift */,
 				502584241B79CE17003D2AD5 /* Test Files */,
 				502584131B79C87D003D2AD5 /* Info.plist */,
@@ -366,6 +372,7 @@
 			files = (
 				502584431B79D4D2003D2AD5 /* String+M3U8Attributes.swift in Sources */,
 				5025844B1B79E97D003D2AD5 /* MediaItem.swift in Sources */,
+				5020802F1B7B37C000E84485 /* PlaylistItem.swift in Sources */,
 				5020802B1B7B339400E84485 /* Playlist.swift in Sources */,
 				502584411B79D407003D2AD5 /* KeyItem.swift in Sources */,
 				502584231B79CC53003D2AD5 /* Errors.swift in Sources */,
@@ -385,6 +392,7 @@
 				502584491B79E363003D2AD5 /* String+M3U8AttributesSpec.swift in Sources */,
 				5020802D1B7B339A00E84485 /* PlaylistSpec.swift in Sources */,
 				5025843D1B79D352003D2AD5 /* DiscontinuityItemSpec.swift in Sources */,
+				502080311B7B37C900E84485 /* PlaylistItemSpec.swift in Sources */,
 				5025843B1B79CE2F003D2AD5 /* ByteRangeSpec.swift in Sources */,
 				5025843F1B79D3E4003D2AD5 /* KeyItemSpec.swift in Sources */,
 			);

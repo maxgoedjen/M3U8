@@ -1,5 +1,5 @@
 //
-//  PlaylistSpec.swift
+//  PlaylistItemSpec.swift
 //  M3U8
 //
 //  Created by Max Goedjen on 8/12/15.
@@ -10,11 +10,11 @@ import M3U8
 import Nimble
 import Quick
 
-class PlaylistSpec: QuickSpec {
+class PlaylistItemSpec: QuickSpec {
     
     override func spec() {
         
-        describe("Playlist") {
+        describe("PlaylistItem") {
             
             it("should fail") {
                 fail()
