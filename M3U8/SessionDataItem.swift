@@ -10,6 +10,18 @@ import Foundation
 
 public struct SessionDataItem: Item {
     
+    public let dataID: String
+    public let value: String?
+    public let uri: String?
+    public let language: String?
+    
+    public init(dataID: String, value: String? = nil, uri: String? = nil, language: String? = nil) {
+        self.dataID = dataID
+        self.value = value
+        self.uri = uri
+        self.language = language
+    }
+    
     public init?(string: String) {
         return nil
     }
