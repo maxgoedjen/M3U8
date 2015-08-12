@@ -23,7 +23,14 @@ public struct SessionDataItem: Item {
     }
     
     public init?(string: String) {
-        return nil
+        let attributes = string.m3u8Attributes
+        guard let dataID = attributes["DATA-ID"] else {
+            return nil
+        }
+        self.dataID = dataID
+        self.value = attributes["VALUE"]
+        self.uri = attributes["URI"]
+        self.language = attributes["LANGUAGE"]
     }
     
 }
@@ -31,7 +38,17 @@ public struct SessionDataItem: Item {
 extension SessionDataItem {
     
     public var description: String {
-        return ""
+        var components = ["#EXT-X-SESSION-DATA:DATA-ID=\"\(dataID)\""]
+        if let value = value {
+            components.append("VALUE=\"\(value)\"")
+        }
+        if let uri = uri {
+            components.append("URI=\"\(uri)\"")
+        }
+        if let language = language {
+            components.append("LANGUAGE=\"\(language)\"")
+        }
+        return ",".join(components)
     }
     
 }
