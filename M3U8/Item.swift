@@ -8,5 +8,5 @@
 
 import Foundation
 
-protocol Item: CustomStringConvertible {
+public protocol Item: CustomStringConvertible {
 }
